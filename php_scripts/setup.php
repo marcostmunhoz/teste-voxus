@@ -1,5 +1,5 @@
 <?php
-  $db = new mysqli("localhost", "marcos", "98564831", "banco_voxus");
+  $db = new mysqli("localhost", "root", "", "banco_voxus");
 
   function login($mail, $password) {
     global $db;

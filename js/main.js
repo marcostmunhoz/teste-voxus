@@ -111,9 +111,9 @@ class Tasks {
         let taskRow = $("<tr>").attr("data-id", key);
         taskRow.append($("<th scope='row'>").text(counter++),
           $("<td>").text(value.name),
-          $("<td>").addClass("edit-field").append($("<input>").attr("type", "text").attr("placeholder", "Nome")),
+          $("<td>").addClass("edit-field").append($("<input>").attr("type", "text").attr("placeholder", "Nome").attr("maxlength", 45)),
           $("<td>").text(value.description),
-          $("<td>").addClass("edit-field").append($("<input>").attr("type", "text").attr("placeholder", "Descrição")),
+          $("<td>").addClass("edit-field").append($("<input>").attr("type", "text").attr("placeholder", "Descrição").attr("maxlength", 200)),
           $("<td>").append((value.file ? $("<a>").attr("href", "download.php?id=" + key).attr("target", "_blank").addClass("file-link").text(value.file) : "-")),
           $("<td>").addClass("edit-field").append(fileSelect.clone(true)),
           $("<td>").append(
