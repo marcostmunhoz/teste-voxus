@@ -1,0 +1,150 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+#main-header > nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: right;
+  background-color: #E8E8E8;
+}
+#main-header > nav > span {
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+#container {
+  margin-top: 30px;
+  text-align: center;
+  padding: 0px 20px;
+}
+#container > header {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px 20px;
+  text-align: center;
+}
+#tasks {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#tasks > table td,
+#tasks > table th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#tasks table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+}
+#tasks > table > thead > tr > th:nth-of-type(1) {
+  width: 50px;
+}
+#tasks > table > thead > tr > th:nth-of-type(2) {
+  width: 200px;
+}
+#tasks > table > thead > tr > th:nth-of-type(3) {
+  width: auto;
+}
+#tasks > table > thead > tr > th:nth-of-type(4) {
+  width: 250px;
+}
+#tasks > table > thead > tr > th:nth-of-type(5) {
+  width: 200px;
+}
+#tasks > table > tbody > tr > td.edit-field {
+  display: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#tasks > table > tbody > tr > td.edit-field > input,
+#tasks > table > tfoot > tr.add-row > td > input {
+  width: calc(100% - 20px);
+  font-size: 20px;
+}
+#tasks > table > tbody > tr.editing {
+  background-color: #FFCC66;
+}
+#tasks > table > tbody > tr.editing > td.edit-field {
+  display: table-cell;
+}
+#tasks > table > tbody > tr.editing > td:not(.edit-field) {
+  display: none;
+}
+.file-link {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+#tasks > table > tfoot > tr.add-row {
+  display: none;
+  background-color: #FFCC66;
+}
+#tasks > table > tfoot > tr.add-row > td {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#tasks > table > tfoot.adding > tr.add-row {
+  display: table-row;
+}
+#tasks > table > tfoot.adding > tr:not(.add-row) {
+  display: none;
+}
+#tasks a,
+#tasks a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: blue;
+}
+input[type="text"], input[type="password"] {
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 3px solid #cccccc;
+  border-radius: 4px;
+  transition: all 0.4s;
+  outline: none;
+}
+input:hover {
+  border-color: #555555;
+}
+/* hack para input[file], permitindo uma maior personalização */
+.inputWrapper {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background-color: #DDF;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  padding: 6px 10px;
+  margin-top: 2px;
+  margin-bottom: -1px;
+  border: 3px solid #cccccc;
+  border-radius: 4px;
+  transition: all 0.4s;
+  outline: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.inputWrapper:hover {
+  border-color: #555555;
+}
+.inputWrapper > input[type="file"] {
+  cursor: pointer;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  right: 0;
+  font-size:50px;
+  opacity: 0;
+}
