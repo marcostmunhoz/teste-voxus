@@ -1,5 +1,5 @@
 <?php
-  $db = new mysqli("localhost", "root", "", "banco_voxus");
+  $db = new mysqli("vhw3t8e71xdz9k14.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "i22oovqlo7wkj2ik", "bwd8nr2qdi60ok1z", "ybhdique98fqjsye");
 
   function login($mail, $password) {
     global $db;
