@@ -1,10 +1,10 @@
 <?php
-  $db = new mysqli("vhw3t8e71xdz9k14.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "i22oovqlo7wkj2ik", "bwd8nr2qdi60ok1z", "ybhdique98fqjsye");
+  $db = new mysqli(DB_ADDRESS, DB_LOGIN, DB_PASSWORD, DB_NAME);
 
   function login($mail, $password) {
     global $db;
     $stmt = $db->prepare("select id, first_name from users where mail_address = ? and password = ?");
-    $stmt->bind_param("ss", $mail, $password);
+    $stmt->bind_param("ss", $mail, md5($password));
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
