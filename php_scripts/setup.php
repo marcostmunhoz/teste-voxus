@@ -1,5 +1,5 @@
 <?php
-  $db = new mysqli(DB_ADDRESS, DB_LOGIN, DB_PASSWORD, DB_NAME);
+  $db = new mysqli(getenv(DB_ADDRESS), getenv(DB_LOGIN), getenv(DB_PASSWORD), getenv(DB_NAME));
 
   function login($mail, $password) {
     global $db;
