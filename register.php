@@ -8,7 +8,7 @@
     if ($stmt->num_rows == 0) {
       $stmt->close();
       $stmt = $db->prepare("insert into users (first_name, last_name, mail_address, password) values (?, ?, ?, ?)");
-      $stmt->bind_param("ssss", $_POST["first_name"], $_POST["last_name"], $_POST["mail"], $_POST["password"]);
+      $stmt->bind_param("ssss", $_POST["first_name"], $_POST["last_name"], $_POST["mail"], md5($_POST["password"]));
       $stmt->execute();
       header("Location: ./?page=login");
     } else {
